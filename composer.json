@@ -15,5 +15,6 @@
         }
     },
     "version": "1.0.0",
-    "require": {}
+    "require": { "moh4mmad/php-otp-without-database" : "dev-master" },
+    "minimum-stability": "dev"
 }
