@@ -3,8 +3,6 @@ This is a simple script written in php to verify OTP(one time password) without 
 
 ## How to install
  - git clone https://github.com/moh4mmad/html-encrypter.git
- OR
- - composer require moh4mmad/php-otp-without-database
 ## Usage
 You need additional tool to send SMS. This module only takes care of the verification part.
 ## Verification process
