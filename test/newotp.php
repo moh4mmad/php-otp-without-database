@@ -1,6 +1,6 @@
 <?php
 
-require_once 'src/otp.class.php';
+require_once '../src/otp.class.php';
 session_start();
 
 if (isset($_POST["email"])) {
