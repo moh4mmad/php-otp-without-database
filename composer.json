@@ -10,6 +10,15 @@
     "emailverify",
     "2fa"
   ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/moh4mmad/php-otp-without-database"
+        }
+    ],
+    "require": {
+        "moh4mmad/php-otp-without-database": "dev-master"
+    },
     "homepage": "https://github.com/moh4mmad/php-otp-without-database",
     "license": "MIT",
     "authors": [
