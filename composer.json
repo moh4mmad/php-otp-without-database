@@ -1,30 +1,19 @@
 {
     "name": "moh4mmad/php-otp-without-database",
     "description": "OTP verification using cryptography without database",
-    "keywords": [
-    "otp",
-    "sms",
-    "verification",
-    "cryptography",
-    "smsverify",
-    "emailverify",
-    "2fa"
-  ],
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/moh4mmad/php-otp-without-database"
-        }
-    ],
-    "require": {
-        "moh4mmad/php-otp-without-database": "dev-master"
-    },
-    "homepage": "https://github.com/moh4mmad/php-otp-without-database",
+    "type": "library",
     "license": "MIT",
     "authors": [
         {
-            "name": "Mohammad Sakib",
+            "name": "Sakib",
             "email": "sakib@sakib.info"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "Sakib\\": "src/"
+        }
+    },
+    "version": "1.0.0",
+    "require": {}
 }
