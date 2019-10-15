@@ -25,6 +25,13 @@ You can then send this hash to the user as response.
 ```
 CreateOTP($email, $otp, $key = "verysecret", $min = 5, $algo = "sha256")
 ```
-| Argument        | Required           | default     | default |
-| ------------- |:-------------:| :-------------:|:-------------|
-| phoneOrEmail | true |	N/A |	Phone or email|
+## Verifying OTP hash
+The user should get the hash from the HTTP request and should get the real OTP via SMS or email.
+Then when the user sends back the information, they can be verified with the following code:
+```
+VerifyTOP($email,$otp,$hash,$key="verysecret", $algo = "sha256")
+```
+This method returns a Boolean. If the verification is successful, it will return true.
+
+## Issues
+If you come across any issues please report them [here](github.com/moh4mmad/php-otp-without-database/issues)
