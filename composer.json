@@ -1,12 +1,7 @@
 {
-  "name": "php-otp-without-database",
-  "version": "1.0.1",
-  "description": "OTP verification using cryptography without database",
-  "repository": {
-    "type": "git",
-    "url": "git://git@github.com/moh4mmad/php-otp-without-database.git"
-  },
-  "keywords": [
+    "name": "moh4mmad/php-otp-without-database",
+    "description": "OTP verification using cryptography without database",
+    "keywords": [
     "otp",
     "sms",
     "verification",
@@ -15,10 +10,12 @@
     "emailverify",
     "2fa"
   ],
-  "author": "Mohammad Sakib (sakib@sakib.info)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/moh4mmad/php-otp-without-database/issues"
-  },
-  "homepage": "https://github.com/moh4mmad/php-otp-without-database#readme"
+    "homepage": "https://github.com/moh4mmad/php-otp-without-database",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mohammad Sakib",
+            "email": "sakib@sakib.info"
+        }
+    ]
 }
