@@ -15,14 +15,14 @@ class OTP
 	 */	
 	public function CreateOTP($email, $otp, $key = "verysecret", $min = 5, $algo = "sha256")
 	{
-		$expire_after = time() + $min * 60 * 1000; //Expires after in Minutes, converteed to miliseconds
-		$data = $email . $otp . $expire_after;
+		$expireAfter = time() + $min * 60 * 1000; //Expires after in Minutes, converteed to miliseconds
+		$data = $email . $otp . $expireAfter;
 		 
 		// creating SHA256 hash of the data
 		$hash = hash_hmac($algo, $data, $key);
 		
 		// send email mail("someone@example.com","OTP", "OTP: ".$otp);
-		return $hash . "." . $expire_after;
+		return $hash . "." . $expireAfter;
 	}
 	
 	/**
