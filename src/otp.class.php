@@ -2,7 +2,16 @@
 namespace Sakib;
 class OTP
 {
-	
+	/**
+	 * Create OTP function
+	 *
+	 * @param string $email
+	 * @param string $otp
+	 * @param string $key
+	 * @param integer $min
+	 * @param string $algo
+	 * @return void
+	 */	
 	public function CreateOTP($email, $otp, $key = "verysecret", $min = 5, $algo = "sha256")
 	{
 		$expire_after = time() + $min * 60 * 1000; //Expires after in Minutes, converteed to miliseconds
@@ -12,7 +21,17 @@ class OTP
 		return $hash.".".$expire_after;
 	}
 	
-	public function VerifyOTP($email,$otp,$hash,$key="verysecret", $algo = "sha256")
+	/**
+	 * Verify OTP
+	 *
+	 * @param string $email
+	 * @param string $otp
+	 * @param string $hash
+	 * @param string $key
+	 * @param string $algo
+	 * @return void
+	 */
+	public function VerifyOTP($email, $otp, $hash, $key="verysecret", $algo = "sha256")
 	{
 		// Hash should have at least one dot
 		if (strpos($hash, '.') !== false) {
@@ -34,6 +53,12 @@ class OTP
 			}
 	}
 	
+	/**
+	 * Generate Random String
+	 *
+	 * @param integer $length
+	 * @return void
+	 */
 	public function generateRandomString($length = 6)
 	{
 		$characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
