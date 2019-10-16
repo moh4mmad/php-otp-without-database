@@ -1,10 +1,13 @@
+# PHP OTP Without Database
 ## What is it?
-This is a simple script written in php to verify OTP(one time password) without any database. You can read the [blog post here](https://blog.anam.co/otp-verification-without-using-a-database/) to understand the technique and motivation.
+This is a simple script written in php to verify One Time Password **(OTP)** without any database. You can read the [blog post here](https://blog.anam.co/otp-verification-without-using-a-database/) to understand the technique and motivation.
 
 ## How to install
 ```
 git clone https://github.com/moh4mmad/php-otp-without-database.git
-OR
+```
+or
+```
 composer require moh4mmad/php-otp-without-database
  ```
 ## Usage
@@ -21,17 +24,17 @@ OTP verification is done in the following steps:
 $otp = new OTP;
 $email = "test@abc.com";
 $code = $otp->generateRandomString(6);
-$hash = $otp->CreateOTP($email,$code);
+$hash = $otp->CreateOTP($email, $code);
 ```
 You can then send this hash to the user as response.
 ```
-CreateOTP($email, $otp, $key = "verysecret", $min = 5, $algo = "sha256")
+CreateOTP($email, $otp, $key = "verysecret", $min = 5, $algo = "sha256");
 ```
 ## Verifying OTP hash
 The user should get the hash from the HTTP request and should get the real OTP via SMS or email.
 Then when the user sends back the information, they can be verified with the following code:
 ```
-VerifyTOP($email,$otp,$hash,$key="verysecret", $algo = "sha256")
+VerifyTOP($email, $otp, $hash, $key="verysecret", $algo = "sha256");
 ```
 This method returns a Boolean. If the verification is successful, it will return true.
 
