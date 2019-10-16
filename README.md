@@ -39,4 +39,4 @@ VerifyTOP($email, $otp, $hash, $key="verysecret", $algo = "sha256");
 This method returns a Boolean. If the verification is successful, it will return true.
 
 ## Issues
-If you come across any issues please report them [here](github.com/moh4mmad/php-otp-without-database/issues)
+If you come across any issues please report them [here](https://github.com/moh4mmad/php-otp-without-database/issues)
