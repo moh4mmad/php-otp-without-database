@@ -8,7 +8,7 @@ if (empty($_SESSION['hash']))
     exit();
 }
 if (isset($_POST["otp"])) {
-    $otp = new OTP;
+    $otp = new Sakib\OTP;
     $email = $_SESSION['email'];
     $hash = $_SESSION['hash'];
     $code = $_POST['otp'];
