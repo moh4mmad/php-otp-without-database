@@ -4,7 +4,7 @@ require_once '../src/otp.class.php';
 session_start();
 
 if (isset($_POST["email"])) {
-$otp = new OTP;
+$otp = new Sakib\OTP;
 $code = $otp->generateRandomString(6);
 $email = $_POST['email'];
 $hash = $otp->CreateOTP($email,$code);
