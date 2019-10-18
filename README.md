@@ -21,7 +21,7 @@ OTP verification is done in the following steps:
 
 ## Generating OTP Hash
 ```
-$otp = new Sakib/OTP;
+$otp = new Sakib\OTP;
 $email = "test@abc.com";
 $code = $otp->generateRandomString(6);
 $hash = $otp->CreateOTP($email, $code);
