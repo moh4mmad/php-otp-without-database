@@ -13,7 +13,7 @@ if (isset($_POST["otp"])) {
     $hash = $_SESSION['hash'];
     $code = $_POST['otp'];
     
-    $hash = $otp->VerifyTOP($email,$code,$hash);
+    $hash = $otp->VerifyOTP($email,$code,$hash);
     
     if($hash == TRUE)
     {
